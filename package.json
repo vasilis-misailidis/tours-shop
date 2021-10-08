@@ -50,6 +50,6 @@
     "setup": "node ./bin/setup.js",
     "netlify:login": "netlify login",
     "netlify:deploy": "netlify deploy -d public -p",
-    "no-index": "cp ./robots.txt dist"
+    "no-index": "cp -f ./robots.txt public/"
   }
 }
