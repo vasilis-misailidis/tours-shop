@@ -43,13 +43,13 @@
   },
   "scripts": {
     "dev": "gatsby develop",
-    "build": "gatsby build && npm run no-index",
+    "build": "gatsby build && npm run robots",
     "heroku-postbuild": "gatsby build",
     "serve": "gatsby serve",
     "postinstall": "node ./bin/hello.js",
     "setup": "node ./bin/setup.js",
     "netlify:login": "netlify login",
     "netlify:deploy": "netlify deploy -d public -p",
-    "no-index": "cp -f ./robots.txt public/"
+    "robots": "cp -f ./robots/* public/"
   }
 }
