@@ -3,7 +3,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 import * as styles from './hero.module.css'
 
-const Hero = ({ image, title, content, phone, email, facebook }) => (
+const Hero = ({ image, title, content, phone, email, facebook, map }) => (
   <div className={styles.hero}>
     {image && (
       <GatsbyImage className={styles.image} alt={title} image={image} />
@@ -19,6 +19,9 @@ const Hero = ({ image, title, content, phone, email, facebook }) => (
       </p>}
       {facebook && <p className={styles.facebook}>
           Facebook: <a href={`https://www.facebook.com/${facebook}`}>{facebook}</a>
+      </p>}
+      {map && <p className={styles.map}>
+          <a href={map} target="_blank">Мы на карте</a>
       </p>}
     </div>
   </div>

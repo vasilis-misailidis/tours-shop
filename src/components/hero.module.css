@@ -50,6 +50,9 @@
 .facebook {
 }
 
+.map {
+}
+
 @media (min-width: 480px) {
   .details {
     padding-top: var(--space-3xl);

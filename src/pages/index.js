@@ -20,6 +20,7 @@ class RootIndex extends React.Component {
           email={author.email}
           phone={author.phone}
           facebook={author.facebook}
+          map={author.github}
         />
         <ArticlePreview posts={posts} />
       </Layout>
@@ -31,12 +32,11 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulBlogPost(sort: { fields: [publishDate], order: ASC }) {
       nodes {
         title
         slug
         publishDate(formatString: "MMMM Do, YYYY")
-        tags
         heroImage {
           gatsbyImageData(
             layout: FULL_WIDTH
@@ -64,6 +64,7 @@ export const pageQuery = graphql`
         email
         phone
         facebook
+        github
         heroImage: image {
           gatsbyImageData(
             layout: CONSTRAINED
