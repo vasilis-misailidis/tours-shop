@@ -12,7 +12,7 @@ const Hero = ({ image, title, content, phone, email, facebook, map }) => (
       <h1 className={styles.title}>{title}</h1>
       {content && <p className={styles.content}>{content}</p>}
       {phone && <p className={styles.phone}>
-          <a href={`callto:+${phone}`}>+{phone}</a>
+          <a href={`tel:+${phone}`}>+{phone}</a>
       </p>}
       {email && <p className={styles.email}>
           <a href={`mailto:${email}`}>{email}</a>
