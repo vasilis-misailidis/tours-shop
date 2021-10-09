@@ -17,6 +17,9 @@ class RootIndex extends React.Component {
           image={author.heroImage.gatsbyImageData}
           title={author.name}
           content={author.shortBio.shortBio}
+          email={author.email}
+          phone={author.phone}
+          facebook={author.facebook}
         />
         <ArticlePreview posts={posts} />
       </Layout>
@@ -58,6 +61,9 @@ export const pageQuery = graphql`
           shortBio
         }
         title
+        email
+        phone
+        facebook
         heroImage: image {
           gatsbyImageData(
             layout: CONSTRAINED
